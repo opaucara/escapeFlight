@@ -1,0 +1,44 @@
+{
+  'destinations' : [
+    { 'city' : 'Obidos',
+      'country' : 'Portugal',
+      'destination airport' : 'LGW',
+      'departure time' : '5:10PM',
+      'trip duration' : '4 hours',
+      'weather' : '32/22',
+    	'price' : '370'
+    },
+    { 'city' : 'Lisboa',
+      'country' : 'Portugal',
+      'destination airport' : 'LGW',
+      'departure time' : '5:10PM',
+      'trip duration' : '4 hours',
+      'weather' : '25/15',
+      'price' : '370'
+    },
+    { 'city' : 'Setubal',
+      'country' : 'Portugal',
+      'destination airport' : 'LGW',
+      'departure time' : '5:10PM',
+      'trip duration' : '4 hours',
+      'weather' : '32/22',
+      'price' : '370'
+    },
+    { 'city' : 'Marstrand',
+      'country' : 'Sweden',
+      'destination airport' : 'LGW',
+      'departure time' : '7:20PM',
+      'trip duration' : '2 hours',
+      'weather' : '24/11',
+      'price' : '253'
+    },
+    { 'city' : 'Mons',
+      'country' : 'Belgium',
+      'destination airport' : 'LHR',
+      'departure time' : '8:10PM',
+      'trip duration' : '1 hours',
+      'weather' : '16/5',
+      'price' : '173'
+    },
+  ]
+}
