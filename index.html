@@ -2,12 +2,17 @@
 <html>
     <head>
         <title>My Sample Project</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <script data-main="js/main" src="js/lib/require.js"></script>
     </head>
     <body>
       <div id="myApp">
         <h1>My Sample Project</h1>
-        <div id="third"></div>
+        <div id="results">
+          <section>
+            <div class="third"></div>
+          </section>
+        </div>
       </div>
 
         <!-- Templates -->
@@ -41,12 +46,11 @@
             </ul>
             <div class="image-grid">
               <div class="large">
-                <img />
+                <img scr="img/<%= photo %>"/>
               </div>
             </div>
             <div class="hover"></div>
           </div>
-
         </script>
     </body>
 </html>

@@ -34,7 +34,11 @@ define(
         },
         addOne: function(destination) {
           var view = new DestinationView({model: destination});
-          this.$("#third").append(view.render().el);
+          var areaSelector = this.getAreaSelector(destination.get('type'));
+          this.$(".third").append(view.render().el);
+        },
+        getAreaSelector: function(destinationType){
+
         }
       });
       return AppView;
