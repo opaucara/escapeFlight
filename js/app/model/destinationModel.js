@@ -3,19 +3,6 @@ define([
   'underscore',
   'backbone'
 ], function($, _, Backbone){
-	  var destinationModel = Backbone.Model.extend(/*{
-	    // Default attributes for the todo item.
-	    defaults: function() {
-	      return {
-	        title: "empty todo...",
-	        order: Todos.nextOrder(),
-	        done: false
-	      };
-	    },
-	    // Toggle the `done` state of this todo item.
-	    toggle: function() {
-	      this.save({done: !this.get("done")});
-	    }
-	  }*/);
+	  var destinationModel = Backbone.Model.extend();
 	  return destinationModel;
 });

@@ -2,12 +2,11 @@ define(
     ['jquery',
     'underscore',
     'backbone',
-    'app/model/destinationModelList'],
-    //The function to execute when all dependencies have loaded. The
-    //arguments to this function are the array of dependencies mentioned
-    //above.
-    function ($, _, Backbone, DestinationModelList) {
+    'app/model/destinationModelList',
+    'app/view/destinationView'],
+    function ($, _, Backbone, DestinationModelList, DestinationView) {
       var AppView = Backbone.View.extend({   
+        el: $("#myApp"),
         initialize: function() {
           /*var Profile = Backbone.Model.extend();
           var ProfileList = Backbone.Collection.extend({
@@ -22,51 +21,20 @@ define(
           profiles.fetch({success: function(){
               console.log(profiles.models);
           }});*/
-
+                    
           this.destinations = new DestinationModelList();
-          this.destinations.fetch();
-          this.render();
-          //this.listenTo(this.destinations, 'all', this.render);
+          var me = this;
+          this.destinations.fetch({success: function(){
+              me.addAll();
+          }});
+          //this.listenTo(this.destinations, 'reset', this.addAll);
         },
-
-        // Re-rendering the App just means refreshing the statistics -- the rest
-        // of the app doesn't change.
-        render: function() {
-          console.log(this.destinations);
-          debugger;
-        },
-
-        // Add a single todo item to the list by creating a view for it, and
-        // appending its element to the `<ul>`.
-        addOne: function(todo) {
-          var view = new TodoView({model: todo});
-          this.$("#todo-list").append(view.render().el);
-        },
-
-        // Add all items in the **Todos** collection at once.
         addAll: function() {
-          Todos.each(this.addOne, this);
+          this.destinations.each(this.addOne, this);
         },
-
-        // If you hit return in the main input field, create new **Todo** model,
-        // persisting it to *localStorage*.
-        createOnEnter: function(e) {
-          if (e.keyCode != 13) return;
-          if (!this.input.val()) return;
-
-          Todos.create({title: this.input.val()});
-          this.input.val('');
-        },
-
-        // Clear all done todo items, destroying their models.
-        clearCompleted: function() {
-          _.invoke(Todos.done(), 'destroy');
-          return false;
-        },
-
-        toggleAllComplete: function () {
-          var done = this.allCheckbox.checked;
-          Todos.each(function (todo) { todo.save({'done': done}); });
+        addOne: function(destination) {
+          var view = new DestinationView({model: destination});
+          this.$("#third").append(view.render().el);
         }
       });
       return AppView;
