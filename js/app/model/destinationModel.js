@@ -1,6 +1,21 @@
-require(["widgets/util"], function(util) {
-    //This function is called when scripts/widgets/util.js is loaded.
-    //If util.js calls define(), then this function is not fired until
-    //util's dependencies have loaded, and the util argument will hold
-    //the module value for "widgets/util".
+define([
+  'jquery',
+  'underscore',
+  'backbone'
+], function($, _, Backbone){
+	  var destinationModel = Backbone.Model.extend(/*{
+	    // Default attributes for the todo item.
+	    defaults: function() {
+	      return {
+	        title: "empty todo...",
+	        order: Todos.nextOrder(),
+	        done: false
+	      };
+	    },
+	    // Toggle the `done` state of this todo item.
+	    toggle: function() {
+	      this.save({done: !this.get("done")});
+	    }
+	  }*/);
+	  return destinationModel;
 });
