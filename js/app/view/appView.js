@@ -22,7 +22,13 @@ define(
               console.log(profiles.models);
           }});*/
                     
-          this.destinations = new DestinationModelList();
+          this.destinations = new DestinationModelList([],{
+            'sortCriteria': {
+              'top': 1,
+              'featured': 2,
+              'regular': 3
+            }
+          });
           var me = this;
           this.destinations.fetch({success: function(){
               me.addAll();
@@ -34,8 +40,8 @@ define(
         },
         addOne: function(destination) {
           var view = new DestinationView({model: destination});
-          var areaSelector = this.getAreaSelector(destination.get('type'));
-          this.$(".third").append(view.render().el);
+          var areaSelector = view.getAreaSelector();
+          this.$(areaSelector).append(view.render().el);
         },
         getAreaSelector: function(destinationType){
 

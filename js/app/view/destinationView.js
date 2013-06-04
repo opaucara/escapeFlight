@@ -4,16 +4,25 @@ define(
   'backbone'],
   function ($, _, Backbone) {
   	var DestinationView = Backbone.View.extend({
-    	
   		areaSelectorMapper: {
-  			'regular': '.third',
-  			'top': 'section',
-  			'featured': '.third'
+  			'regular': {
+          selector: '.third',
+          template: 'templateRegular'
+        },
+  			'top': {
+          selector: 'section',
+          template: 'templateRegular'
+        },
+  			'featured': {
+          selector: '.half',
+          template: 'templateRegular'
+        }
   		},
     	areaSelector: 'regular',
 
     	// Cache the template function for a single item.
-  	  template: _.template($('#destination-item-template').html()),
+      templateHighlighted: _.template($('#highlighted-item-template').html()),
+      templateRegular: _.template($('#regular-item-template').html()),
 	    // The DOM events specific to an item.
 	    events: {
 	    	"hover .large img":"handleHover"
@@ -23,11 +32,12 @@ define(
 	    },
 	    // Re-render the titles of the todo item.
 	    render: function() {
-	      this.$el.html(this.template(this.model.toJSON()));
+        var templateName = this.areaSelectorMapper[this.model.get('type')].template;
+	      this.$el.html(this[templateName](this.model.toJSON()));
 	      return this;
 	    },
 	    getAreaSelector: function(){
-	    	return this.areaSelectorMapper[this.areaSelector];
+	    	return this.areaSelectorMapper[this.model.get('type')].selector;
 	    }
     });
     return DestinationView;

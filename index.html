@@ -8,15 +8,56 @@
     <body>
       <div id="myApp">
         <h1>My Sample Project</h1>
-        <div id="results">
-          <section>
-            <div class="third"></div>
-          </section>
+        <div id="results" class="places">
+          <div class="container">
+            <section>
+              <div class="half"></div>
+              <div class="third"></div>
+            </section>
+          </div>
         </div>
       </div>
 
         <!-- Templates -->
-        <script type="text/template" id="destination-item-template">
+        <script type="text/template" id="highlighted-item-template">
+          <div class="display">
+            <div class="info">
+              <h1 class="city"><%= city %></h1>
+              <h1 class="country"><%= country %></h1>
+              <h2>
+                <span class="icon-plane"></span>
+                <strong><%= departureTime %></strong>
+                <%= destinationAirport %>
+              </h2>
+              <ul>
+                <li class="time">
+                  <span class="icon-distance"></span>
+                  <div>
+                    <%= tripDuration %><em>hours</em>
+                  </div>
+                </li>
+                <li class="weather">
+                  <span class="icon-clear"></span>
+                  <div>
+                    <span>18°</span>
+                    <em>/</em>
+                    <span>8°</span>
+                  </div>
+                </li>              
+                <li class="price"><em>£</em><%= price %></li>
+              </ul>
+            </div>
+            
+            <div class="image-grid">
+              <div class="large">
+                <img scr="img/<%= photo %>"/>
+              </div>
+            </div>
+            <div class="hover"></div>
+          </div>
+        </script>
+
+        <script type="text/template" id="regular-item-template">
           <div class="display">
             <div class="info">
               <h1 class="city"><%= city %></h1>
