@@ -20,12 +20,6 @@ define([
         this.options.pageNumber++;
         this.options.currentIndex = (this.options.pageNumber -1) * this.options.resultsSize;
         return destinations;
-      },
-      comparator : function(a, b) {
-        /*return (this.options.sortCriteria[a.get('type')]<this.options.sortCriteria[b.get('type')]) ? -1:
-               ((this.options.sortCriteria[a.get('type')]>this.options.sortCriteria[b.get('type')]) ? 1
-               :0)
-                ;*/
       }
 	  });
 	  return DestinationModelList;

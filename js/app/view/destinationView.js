@@ -18,9 +18,6 @@ define(
           template: 'templateHighlighted'
         }
   		},
-    	areaSelector: 'regular',
-
-    	// Cache the template function for a single item.
       templateHighlighted: _.template($('#highlighted-item-template').html()),
       templateRegular: _.template($('#regular-item-template').html()),
 	    // The DOM events specific to an item.

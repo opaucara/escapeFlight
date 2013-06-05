@@ -31,10 +31,14 @@ define(
           this.$(areaSelector).append(view.render().el);
         },
         addMore: function(){
-          this.destinations.fetch({success: $.proxy(this, 'appendMoreResults')});
+          this.destinations.fetch({success: $.proxy(this, 'appendMoreResults'),
+            remove:false
+          });
         },
-        appendMoreResults: function(results){debugger;
-          this.destinations.add(results);
+        appendMoreResults: function(results){
+          //Keeps bringing full collection
+          this.$('.third, .half, .top-destination').empty();
+          this.addAll();
         }
       });
       return AppView;
