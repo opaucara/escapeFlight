@@ -1,0 +1,29 @@
+section  .more {
+	font: 300 16px "futura-pt",Arial Narrow,Helvetica Neue,Arial,Helvetica,sans-serif;
+	line-height: 70px;
+	text-transform: uppercase;
+	color: #666666;
+	text-align: center;
+	text-shadow: rgba(255,255,255,0.8) 0 1px;
+}
+
+#myApp section .more{
+	display: block;
+	cursor: pointer;
+	position: relative;
+	clear: both;
+	height: 70px;
+	padding: 0 35px;
+	background: #fff url("../img/more-gradient.png") repeat-x top;
+	font: 300 16px "futura-pt",Arial Narrow,Helvetica Neue,Arial,Helvetica,sans-serif;
+	line-height: 70px;
+	text-transform: uppercase;
+	color: #666666;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: rgba(255,255,255,0.8) 0 1px;
+	border: 1px solid #e5e5e5;
+	-webkit-box-shadow: inset #fff 0 1px,rgba(0,0,0,0.03) 0 2px 2px;
+	-moz-box-shadow: inset #fff 0 1px,rgba(0,0,0,0.03) 0 2px 2px;
+	box-shadow: inset #fff 0 1px,rgba(0,0,0,0.03) 0 2px 2px;
+}

@@ -10,12 +10,12 @@ define(
           template: 'templateRegular'
         },
   			'top': {
-          selector: 'section',
-          template: 'templateRegular'
+          selector: '.top-destination',
+          template: 'templateHighlighted'
         },
   			'featured': {
           selector: '.half',
-          template: 'templateRegular'
+          template: 'templateHighlighted'
         }
   		},
     	areaSelector: 'regular',

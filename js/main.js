@@ -13,5 +13,5 @@ require.config({
 });
 
 require(['app/view/appView'], function(AppView) {
-    var App = new AppView;
+    var App = new AppView({'resultsSize':5});
 });

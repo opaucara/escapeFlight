@@ -5,7 +5,7 @@
       "country" : "Portugal",
       "destinationAirport" : "LGW",
       "departureTime" : "5:10PM",
-      "tripDuration" : "4 hours",
+      "tripDuration" : "4",
       "weather" : "32/22",
       "photo" : "Antwerp_510.jpg",
     	"price" : "370"
@@ -15,7 +15,7 @@
       "country" : "Portugal",
       "destinationAirport" : "LGW",
       "departureTime" : "5:10PM",
-      "tripDuration" : "4 hours",
+      "tripDuration" : "4",
       "weather" : "25/15",
       "photo" : "Barcelona_510.jpg",
       "price" : "370"
@@ -25,7 +25,7 @@
       "country" : "Portugal",
       "destinationAirport" : "LGW",
       "departureTime" : "5:10PM",
-      "tripDuration" : "4 hours",
+      "tripDuration" : "4",
       "weather" : "32/22",
       "photo" : "Marstrand_Island_510.jpg",
       "price" : "370"
@@ -35,7 +35,7 @@
       "country" : "Sweden",
       "destinationAirport" : "LGW",
       "departureTime" : "7:20PM",
-      "tripDuration" : "2 hours",
+      "tripDuration" : "2",
       "weather" : "24/11",
       "photo" : "Rome_510.jpg",
       "price" : "253"
@@ -45,7 +45,7 @@
       "country" : "Belgium",
       "destinationAirport" : "LHR",
       "departureTime" : "8:10PM",
-      "tripDuration" : "1 hours",
+      "tripDuration" : "1",
       "weather" : "16/5",
       "photo" : "Heidelburg_510.jpf",
       "price" : "173"
@@ -55,7 +55,7 @@
       "country" : "Denmark",
       "destinationAirport" : "LHR",
       "departureTime" : "7:00PM",
-      "tripDuration" : "2 hours",
+      "tripDuration" : "2",
       "weather" : "22/20",
       "photo" : "Antwerp_510.jpg",
       "price" : "177"
@@ -65,7 +65,7 @@
       "country" : "Belgium",
       "destinationAirport" : "LHR",
       "departureTime" : "1:10PM",
-      "tripDuration" : "8 hours",
+      "tripDuration" : "8",
       "weather" : "25/15",
       "photo" : "Barcelona_510.jpg",
       "price" : "173"
@@ -75,7 +75,7 @@
       "country" : "Germany",
       "destinationAirport" : "LGW",
       "departureTime" : "7:50PM",
-      "tripDuration" : "4 hours",
+      "tripDuration" : "4",
       "weather" : "32/22",
       "photo" : "Marstrand_Island_510.jpg",
       "price" : "300"
@@ -85,7 +85,7 @@
       "country" : "Italy",
       "destinationAirport" : "LGW",
       "departureTime" : "8:20PM",
-      "tripDuration" : "1 hours",
+      "tripDuration" : "1",
       "weather" : "24/11",
       "photo" : "Rome_510.jpg",
       "price" : "159"

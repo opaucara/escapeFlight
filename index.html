@@ -3,16 +3,21 @@
     <head>
         <title>My Sample Project</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/appStyles.css">
         <script data-main="js/main" src="js/lib/require.js"></script>
     </head>
     <body>
       <div id="myApp">
-        <h1>My Sample Project</h1>
+        <h1>Escape Flight</h1>
         <div id="results" class="places">
           <div class="container">
             <section>
+              <div class="top-destination"></div>
               <div class="half"></div>
               <div class="third"></div>
+              <a class="more">
+                <strong>Show me more</strong> destinations
+              </a>
             </section>
           </div>
         </div>
@@ -39,12 +44,12 @@
                 <li class="weather">
                   <span class="icon-clear"></span>
                   <div>
-                    <span>18°</span>
+                    <span>18&deg;</span>
                     <em>/</em>
-                    <span>8°</span>
+                    <span>8&deg;</span>
                   </div>
                 </li>              
-                <li class="price"><em>£</em><%= price %></li>
+                <li class="price"><em>&pound;</em><%= price %></li>
               </ul>
             </div>
             
@@ -78,12 +83,12 @@
               <li class="weather">
                 <span class="icon-clear"></span>
                 <div>
-                  <span>18°</span>
+                  <span>18&deg;</span>
                   <em>/</em>
-                  <span>8°</span>
+                  <span>8&deg;</span>
                 </div>
               </li>              
-              <li class="price"><em>£</em><%= price %></li>
+              <li class="price"><em>&pound;</em><%= price %></li>
             </ul>
             <div class="image-grid">
               <div class="large">
